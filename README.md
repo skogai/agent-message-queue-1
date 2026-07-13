@@ -407,12 +407,22 @@ Building something on AMQ? Open an issue or PR to be listed here.
 
 ## Development
 
+With [mise](https://mise.jdx.dev/), install the pinned contributor toolchain and
+run the canonical local gate:
+
+```bash
+mise install
+mise run ci
+```
+
+The underlying Make targets remain available directly:
+
 ```bash
 git clone https://github.com/avivsinai/agent-message-queue.git
 cd agent-message-queue
 make build   # Build binary
 make test    # Run tests
-make ci      # Full CI: vet + lint + test + smoke
+make ci      # Run the repository-defined local CI gate
 ```
 
 ## FAQ
